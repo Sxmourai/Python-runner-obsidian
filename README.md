@@ -17,14 +17,13 @@ def example(name):
 ```
 Which would be called like this:
 ```sh
-python main.py "example hi"
+python main.py example hi
 -> Hello hi !
 ```
-*Notice the " around the command and args. This is because Shell Commands puts everything as a single argument, and the script primarily targets shell commands, I might make a different version only for Shell commands...*
 Or, the script also tries to automatically find the best choice, so this also works:
 
 ```sh
-python main.py "ex hi"
+python main.py ex hi
 -> Hello hi !
 ```
 (See that ex starts the same as example...)
@@ -35,7 +34,7 @@ def lot_of_args(a1, a2, *args):
 ```
 Then:
 ```sh
-python main.py "lot hi how are you ?"
+python main.py lot hi how are you ?
 -> 1hi 2how Other:('are', 'you', '?')
 ```
 So every spaces are turned into one argument to your functions

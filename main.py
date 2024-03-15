@@ -22,7 +22,7 @@ if user_command == "get-funcs":
 for name, func in user.__dict__.items():
     if callable(func) and name.lower().startswith(user_command.lower()):
         try:
-            func(*user_args)
+            func(*user_args, *sys.argv[2:])
             exit(0)
         except TypeError as e:
             print(f"Type error: {e}\n\nMaybe you forgot to add cli arguments to YOUR function (arguments are passed: *sys.args[3:])")
