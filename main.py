@@ -8,7 +8,7 @@ import sys, inspect
 
 def print_funcs():
     for name, func in user.__dict__.items():
-        if callable(func):
+        if inspect.isfunction(func):
             print(name)
 
 args = sys.argv[1:]
@@ -20,7 +20,7 @@ if user_command == "get-funcs":
     exit()
 
 for name, func in user.__dict__.items():
-    if callable(func) and name.lower().startswith(user_command.lower()):
+    if inspect.isfunction(func) and name.lower().startswith(user_command.lower()):
         try:
             func(*user_args, *sys.argv[2:])
             exit(0)

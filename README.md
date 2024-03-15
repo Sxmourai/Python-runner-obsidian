@@ -38,5 +38,11 @@ python main.py lot hi how are you ?
 -> 1hi 2how Other:('are', 'you', '?')
 ```
 So every spaces are turned into one argument to your functions
+
+You can also get your functions if you aren't sure:
+```sh
+python main.py get-funcs
+```
+
 You now have everything to easily make shell scripts in python ! 
 
